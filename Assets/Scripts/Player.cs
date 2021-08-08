@@ -204,7 +204,7 @@ public class Player : MonoBehaviour {
     void Update() {
         //下にすり抜ける用
         var value = inputActions.Player.Move.ReadValue<Vector2>();
-        var active = value.y > -0.8f;
+        var active = value.y > -0.5f;
 
         if (foot.activeSelf != active) {
             foot.SetActive(active);
