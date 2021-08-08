@@ -123,13 +123,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1001 &15842307
+=======
+--- !u!1001 &127107835
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 9014052089950385057, guid: a44590af4a1581b4aba964707e127f70, type: 3}
       propertyPath: m_Name
       value: FireArea (3)
@@ -193,6 +198,66 @@ PrefabInstance:
     m_RemovedComponents: []
 <<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: a44590af4a1581b4aba964707e127f70, type: 3}
+=======
+    - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.0098
+      objectReference: {fileID: 0}
+    - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 85.748
+      objectReference: {fileID: 0}
+    - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.709
+      objectReference: {fileID: 0}
+    - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6680697227291035698, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
+      propertyPath: m_Name
+      value: BlueBox (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
 --- !u!1 &207996310
 =======
   m_SourcePrefab: {fileID: 100100000, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
@@ -7646,8 +7711,23 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
+<<<<<<< HEAD
       m_AllTileFlags: 2147483649
   - first: {x: 88, y: 22, z: 0}
+=======
+      m_AllTileFlags: 1073741825
+  - first: {x: 185, y: 2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 10
+      m_TileSpriteIndex: 10
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 193, y: 2, z: 0}
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
     second:
       serializedVersion: 2
       m_TileIndex: 8
@@ -7656,8 +7736,23 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
+<<<<<<< HEAD
       m_AllTileFlags: 2147483649
   - first: {x: 89, y: 22, z: 0}
+=======
+      m_AllTileFlags: 1073741825
+  - first: {x: 194, y: 2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 10
+      m_TileSpriteIndex: 10
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -14, y: 3, z: 0}
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -7701,8 +7796,23 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
+<<<<<<< HEAD
       m_AllTileFlags: 2147483649
   - first: {x: -14, y: 23, z: 0}
+=======
+      m_AllTileFlags: 1073741825
+  - first: {x: 194, y: 3, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 10
+      m_TileSpriteIndex: 10
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -14, y: 4, z: 0}
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -7763,6 +7873,7 @@ Tilemap:
       dummyAlignment: 0
 <<<<<<< HEAD
       m_AllTileFlags: 1073741825
+<<<<<<< HEAD
   - first: {x: -14, y: 5, z: 0}
     second:
       serializedVersion: 2
@@ -7778,6 +7889,9 @@ Tilemap:
       m_AllTileFlags: 2147483649
   - first: {x: -14, y: 24, z: 0}
 >>>>>>> 7e0ec07e6b4d77bab4eb97b4ca59c3110c3dd798
+=======
+  - first: {x: 194, y: 4, z: 0}
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -7788,11 +7902,15 @@ Tilemap:
       dummyAlignment: 0
 <<<<<<< HEAD
       m_AllTileFlags: 1073741825
+<<<<<<< HEAD
   - first: {x: -14, y: 6, z: 0}
 =======
       m_AllTileFlags: 2147483649
   - first: {x: 111, y: 24, z: 0}
 >>>>>>> 7e0ec07e6b4d77bab4eb97b4ca59c3110c3dd798
+=======
+  - first: {x: -14, y: 5, z: 0}
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
     second:
       serializedVersion: 2
       m_TileIndex: 8
@@ -7803,11 +7921,15 @@ Tilemap:
       dummyAlignment: 0
 <<<<<<< HEAD
       m_AllTileFlags: 1073741825
+<<<<<<< HEAD
   - first: {x: 193, y: 6, z: 0}
 =======
       m_AllTileFlags: 2147483649
   - first: {x: 112, y: 24, z: 0}
 >>>>>>> 7e0ec07e6b4d77bab4eb97b4ca59c3110c3dd798
+=======
+  - first: {x: 193, y: 5, z: 0}
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -7818,6 +7940,7 @@ Tilemap:
       dummyAlignment: 0
 <<<<<<< HEAD
       m_AllTileFlags: 1073741825
+<<<<<<< HEAD
   - first: {x: -14, y: 7, z: 0}
     second:
       serializedVersion: 2
@@ -7893,28 +8016,32 @@ Tilemap:
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: 198, y: 7, z: 0}
+=======
+  - first: {x: 194, y: 5, z: 0}
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
     second:
       serializedVersion: 2
-      m_TileIndex: 7
-      m_TileSpriteIndex: 7
+      m_TileIndex: 10
+      m_TileSpriteIndex: 10
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 199, y: 7, z: 0}
+  - first: {x: -14, y: 6, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 7
-      m_TileSpriteIndex: 7
+      m_TileIndex: 5
+      m_TileSpriteIndex: 5
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 200, y: 7, z: 0}
+  - first: {x: -14, y: 7, z: 0}
     second:
       serializedVersion: 2
+<<<<<<< HEAD
       m_TileIndex: 7
       m_TileSpriteIndex: 7
 =======
@@ -7925,6 +8052,10 @@ Tilemap:
       m_TileIndex: 8
       m_TileSpriteIndex: 8
 >>>>>>> 7e0ec07e6b4d77bab4eb97b4ca59c3110c3dd798
+=======
+      m_TileIndex: 5
+      m_TileSpriteIndex: 5
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -8167,12 +8298,13 @@ Tilemap:
 <<<<<<< HEAD
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: ee39dc46cf3c1d54f9ad6a86eb99815a, type: 2}
-  - m_RefCount: 275
+  - m_RefCount: 268
     m_Data: {fileID: 11400000, guid: 88620b47691025a49b4aa707592257ae, type: 2}
   - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: d07aace8e72186d45970726b551750b3, type: 2}
-  - m_RefCount: 7
+  - m_RefCount: 6
     m_Data: {fileID: 11400000, guid: 310435d34c84ec44ba464fe4072a61b9, type: 2}
+<<<<<<< HEAD
   - m_RefCount: 36
 =======
   - m_RefCount: 7
@@ -8181,6 +8313,9 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 88620b47691025a49b4aa707592257ae, type: 2}
   - m_RefCount: 145
 >>>>>>> 7e0ec07e6b4d77bab4eb97b4ca59c3110c3dd798
+=======
+  - m_RefCount: 41
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
     m_Data: {fileID: 11400000, guid: a50e69b31e035e347a1113937f5ff41f, type: 2}
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: b9348a6ab2e73b04f845dfa16f67171b, type: 2}
@@ -8224,12 +8359,13 @@ Tilemap:
 <<<<<<< HEAD
   - m_RefCount: 3
     m_Data: {fileID: -5456971143380735701, guid: 774cb64cbb5367946b1aef2d6015c08d, type: 3}
-  - m_RefCount: 275
+  - m_RefCount: 268
     m_Data: {fileID: 2750868226957455822, guid: e0790104852053f4e999ddfad30a238a, type: 3}
   - m_RefCount: 5
     m_Data: {fileID: 9155577320851276790, guid: e0790104852053f4e999ddfad30a238a, type: 3}
-  - m_RefCount: 7
+  - m_RefCount: 6
     m_Data: {fileID: -1071166246472815891, guid: e0790104852053f4e999ddfad30a238a, type: 3}
+<<<<<<< HEAD
   - m_RefCount: 36
 =======
   - m_RefCount: 7
@@ -8238,6 +8374,9 @@ Tilemap:
     m_Data: {fileID: 2750868226957455822, guid: e0790104852053f4e999ddfad30a238a, type: 3}
   - m_RefCount: 145
 >>>>>>> 7e0ec07e6b4d77bab4eb97b4ca59c3110c3dd798
+=======
+  - m_RefCount: 41
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
     m_Data: {fileID: 6683067058418277434, guid: e0790104852053f4e999ddfad30a238a, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: -1539459383507885378, guid: 774cb64cbb5367946b1aef2d6015c08d, type: 3}
@@ -8267,8 +8406,12 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: -4112516393034067458, guid: e0790104852053f4e999ddfad30a238a, type: 3}
   m_TileMatrixArray:
+<<<<<<< HEAD
   - m_RefCount: 569
 >>>>>>> 7e0ec07e6b4d77bab4eb97b4ca59c3110c3dd798
+=======
+  - m_RefCount: 407
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
     m_Data:
       e00: 1
       e01: 0
@@ -8288,10 +8431,14 @@ Tilemap:
       e33: 1
   m_TileColorArray:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - m_RefCount: 536
 =======
   - m_RefCount: 569
 >>>>>>> 7e0ec07e6b4d77bab4eb97b4ca59c3110c3dd798
+=======
+  - m_RefCount: 407
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -8317,6 +8464,7 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+<<<<<<< HEAD
 --- !u!1001 &260219174
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8374,6 +8522,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
+=======
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
 --- !u!1001 &261198088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8384,18 +8534,22 @@ PrefabInstance:
     - target: {fileID: 6680697227291035692, guid: 6ba65eb6046575b42b1106f32063f037, type: 3}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 6
 =======
       value: 0
 >>>>>>> 7e0ec07e6b4d77bab4eb97b4ca59c3110c3dd798
+=======
+      value: 1
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
       objectReference: {fileID: 0}
     - target: {fileID: 6680697227291035692, guid: 6ba65eb6046575b42b1106f32063f037, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 88.43
+      value: 88.26483
       objectReference: {fileID: 0}
     - target: {fileID: 6680697227291035692, guid: 6ba65eb6046575b42b1106f32063f037, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.78
+      value: -1.2720736
       objectReference: {fileID: 0}
     - target: {fileID: 6680697227291035692, guid: 6ba65eb6046575b42b1106f32063f037, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8445,18 +8599,22 @@ PrefabInstance:
     - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 9
 =======
       value: 4
 >>>>>>> 7e0ec07e6b4d77bab4eb97b4ca59c3110c3dd798
+=======
+      value: 5
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
       objectReference: {fileID: 0}
     - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 69.97
+      value: 69.67446
       objectReference: {fileID: 0}
     - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.74
+      value: -4.3872194
       objectReference: {fileID: 0}
     - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8506,18 +8664,22 @@ PrefabInstance:
     - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 7
 =======
       value: 1
 >>>>>>> 7e0ec07e6b4d77bab4eb97b4ca59c3110c3dd798
+=======
+      value: 2
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
       objectReference: {fileID: 0}
     - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 88.48
+      value: 88.248085
       objectReference: {fileID: 0}
     - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.78
+      value: -3.6193225
       objectReference: {fileID: 0}
     - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8861,10 +9023,14 @@ Transform:
   - {fileID: 825836404}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 19
 =======
   m_RootOrder: 12
 >>>>>>> 7e0ec07e6b4d77bab4eb97b4ca59c3110c3dd798
+=======
+  m_RootOrder: 13
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &825836403
 GameObject:
@@ -8959,10 +9125,14 @@ PrefabInstance:
     - target: {fileID: 1946707483457287922, guid: df8832984cdbe5942b1e4afa4f345b9a, type: 3}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 12
 =======
       value: 7
 >>>>>>> 7e0ec07e6b4d77bab4eb97b4ca59c3110c3dd798
+=======
+      value: 8
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
       objectReference: {fileID: 0}
     - target: {fileID: 1946707483457287922, guid: df8832984cdbe5942b1e4afa4f345b9a, type: 3}
       propertyPath: m_LocalScale.x
@@ -9032,10 +9202,14 @@ PrefabInstance:
     - target: {fileID: 3492305080327952965, guid: b972dd45690559e40848b0a098f763ee, type: 3}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 14
 =======
       value: 9
 >>>>>>> 7e0ec07e6b4d77bab4eb97b4ca59c3110c3dd798
+=======
+      value: 10
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
       objectReference: {fileID: 0}
     - target: {fileID: 3492305080327952965, guid: b972dd45690559e40848b0a098f763ee, type: 3}
       propertyPath: m_LocalScale.x
@@ -9334,7 +9508,11 @@ Transform:
   - {fileID: 699777419}
   - {fileID: 566334056}
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 20
+=======
+  m_RootOrder: 14
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 =======
 >>>>>>> 7e0ec07e6b4d77bab4eb97b4ca59c3110c3dd798
@@ -9381,10 +9559,14 @@ Transform:
   - {fileID: 228128238}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 18
 =======
   m_RootOrder: 11
 >>>>>>> 7e0ec07e6b4d77bab4eb97b4ca59c3110c3dd798
+=======
+  m_RootOrder: 12
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1269510894
 GameObject:
@@ -9562,18 +9744,22 @@ PrefabInstance:
     - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 10
 =======
       value: 5
 >>>>>>> 7e0ec07e6b4d77bab4eb97b4ca59c3110c3dd798
+=======
+      value: 6
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
       objectReference: {fileID: 0}
     - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 70.04
+      value: 69.719894
       objectReference: {fileID: 0}
     - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.85
+      value: -6.658874
       objectReference: {fileID: 0}
     - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10156,10 +10342,14 @@ PrefabInstance:
     - target: {fileID: 1946707483457287922, guid: df8832984cdbe5942b1e4afa4f345b9a, type: 3}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 8
 =======
       value: 3
 >>>>>>> 7e0ec07e6b4d77bab4eb97b4ca59c3110c3dd798
+=======
+      value: 4
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
       objectReference: {fileID: 0}
     - target: {fileID: 1946707483457287922, guid: df8832984cdbe5942b1e4afa4f345b9a, type: 3}
       propertyPath: m_LocalScale.x
@@ -10329,6 +10519,7 @@ Transform:
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &1780577512
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10386,6 +10577,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91035cb103e6b674abdcfdac14ad3d66, type: 3}
+=======
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
 --- !u!1 &1796048758
 =======
 --- !u!1 &1860372060
@@ -10431,10 +10624,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 17
 =======
   m_RootOrder: 14
 >>>>>>> 7e0ec07e6b4d77bab4eb97b4ca59c3110c3dd798
+=======
+  m_RootOrder: 11
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1918808830
 GameObject:
@@ -10519,6 +10716,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1001 &2012149621
 PrefabInstance:
@@ -10662,6 +10860,8 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 >>>>>>> 7e0ec07e6b4d77bab4eb97b4ca59c3110c3dd798
+=======
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
 --- !u!1001 &2024162247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10672,18 +10872,22 @@ PrefabInstance:
     - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 13
 =======
       value: 8
 >>>>>>> 7e0ec07e6b4d77bab4eb97b4ca59c3110c3dd798
+=======
+      value: 9
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
       objectReference: {fileID: 0}
     - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.51
+      value: 22.790031
       objectReference: {fileID: 0}
     - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.87
+      value: -6.56
       objectReference: {fileID: 0}
     - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10816,18 +11020,22 @@ PrefabInstance:
     - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 11
 =======
       value: 6
 >>>>>>> 7e0ec07e6b4d77bab4eb97b4ca59c3110c3dd798
+=======
+      value: 7
+>>>>>>> parent of 411af84 (sutege_03_totyuu02)
       objectReference: {fileID: 0}
     - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 67.91
+      value: 67.26651
       objectReference: {fileID: 0}
     - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.85
+      value: -6.658874
       objectReference: {fileID: 0}
     - target: {fileID: 6680697227291035692, guid: 7ce3186ea2d29124391ee4f1a31c2437, type: 3}
       propertyPath: m_LocalPosition.z
