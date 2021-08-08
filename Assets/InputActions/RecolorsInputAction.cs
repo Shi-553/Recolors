@@ -73,6 +73,14 @@ public class @RecolorsInputAction : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""ReturnColor"",
+                    ""type"": ""Button"",
+                    ""id"": ""707decf5-5b30-48b7-8d52-58f1237f8691"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -282,6 +290,28 @@ public class @RecolorsInputAction : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""SwitchAbilityMove"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f90206be-2abb-43d1-a5e4-494a03760c74"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ReturnColor"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""288f26fc-7623-4841-a5c9-f55acaf1f3d1"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ReturnColor"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -866,6 +896,7 @@ public class @RecolorsInputAction : IInputActionCollection, IDisposable
         m_Player_Menu = m_Player.FindAction("Menu", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Grab = m_Player.FindAction("Grab", throwIfNotFound: true);
+        m_Player_ReturnColor = m_Player.FindAction("ReturnColor", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -934,6 +965,7 @@ public class @RecolorsInputAction : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Menu;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Grab;
+    private readonly InputAction m_Player_ReturnColor;
     public struct PlayerActions
     {
         private @RecolorsInputAction m_Wrapper;
@@ -945,6 +977,7 @@ public class @RecolorsInputAction : IInputActionCollection, IDisposable
         public InputAction @Menu => m_Wrapper.m_Player_Menu;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Grab => m_Wrapper.m_Player_Grab;
+        public InputAction @ReturnColor => m_Wrapper.m_Player_ReturnColor;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -975,6 +1008,9 @@ public class @RecolorsInputAction : IInputActionCollection, IDisposable
                 @Grab.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGrab;
                 @Grab.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGrab;
                 @Grab.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGrab;
+                @ReturnColor.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReturnColor;
+                @ReturnColor.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReturnColor;
+                @ReturnColor.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReturnColor;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1000,6 +1036,9 @@ public class @RecolorsInputAction : IInputActionCollection, IDisposable
                 @Grab.started += instance.OnGrab;
                 @Grab.performed += instance.OnGrab;
                 @Grab.canceled += instance.OnGrab;
+                @ReturnColor.started += instance.OnReturnColor;
+                @ReturnColor.performed += instance.OnReturnColor;
+                @ReturnColor.canceled += instance.OnReturnColor;
             }
         }
     }
@@ -1163,6 +1202,7 @@ public class @RecolorsInputAction : IInputActionCollection, IDisposable
         void OnMenu(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnGrab(InputAction.CallbackContext context);
+        void OnReturnColor(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
