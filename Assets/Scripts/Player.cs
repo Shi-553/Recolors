@@ -345,4 +345,21 @@ public class Player : MonoBehaviour {
             list_renderersForClothes[i].material.color = ColorManager.GetOriginalColor(c_type);
         }
     }
+
+    public ColorManager.Color_Type GetPlayerColor()
+    {
+        return current;
+    }
+
+    public bool isUsingAbility()
+    {
+        if (abilityDurationCo != null)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
