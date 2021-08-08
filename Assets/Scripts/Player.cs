@@ -35,7 +35,6 @@ public class Player : MonoBehaviour {
 
     ColorManager manager;
     Vector3 respawnPos;
-    Vector3 camera_respawnPos;
 
     Animator animator;
 
@@ -63,7 +62,6 @@ public class Player : MonoBehaviour {
         yScale = transform.localScale.y;
 
         respawnPos = transform.position;
-        camera_respawnPos = Camera.main.transform.position;
 
         isColor = false;
 
@@ -114,13 +112,13 @@ public class Player : MonoBehaviour {
     }
 
     private void UseAbilityStarted(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
-        if (!isColor|| abilityCoolDownCo!=null) {
+        if (!isColor || abilityCoolDownCo != null) {
             return;
         }
         switch (current) {
             case ColorManager.Color_Type.Blue:
                 var scale = transform.localScale;
-                scale.y = yScale/3;
+                scale.y = yScale / 3;
                 transform.localScale = scale;
                 break;
             case ColorManager.Color_Type.Red:
@@ -156,7 +154,7 @@ public class Player : MonoBehaviour {
             default:
                 break;
         }
-        if (abilityDurationCo!=null) {
+        if (abilityDurationCo != null) {
             StopCoroutine(abilityDurationCo);
             abilityDurationCo = null;
         }
@@ -210,10 +208,10 @@ public class Player : MonoBehaviour {
             foot.SetActive(active);
         }
 
-        if (!groundChecker.IsGround&& lastIsGround) {
+        if (!groundChecker.IsGround && lastIsGround) {
             animator.SetBool("jump", true);
         }
-        if (groundChecker.IsGround&& !lastIsGround) {
+        if (groundChecker.IsGround && !lastIsGround) {
             animator.SetBool("jump", false);
         }
 
@@ -223,7 +221,7 @@ public class Player : MonoBehaviour {
     //ジャンプ
     private void JumpStarted(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
         if (groundChecker.IsGround) {
-            var j = (current == ColorManager.Color_Type.Blue && abilityDurationCo != null) ?  waterJump : jump;
+            var j = (current == ColorManager.Color_Type.Blue && abilityDurationCo != null) ? waterJump : jump;
 
             rigid.AddForce(new Vector2(0, j), ForceMode2D.Impulse);
 
@@ -237,8 +235,8 @@ public class Player : MonoBehaviour {
 
         animator.SetFloat("speed", Mathf.Abs(value.x));
 
-        if (grabedObject!=null&& grabedObject.IsGrab) {
-            grabedObject.GrabMove(value.x );
+        if (grabedObject != null && grabedObject.IsGrab) {
+            grabedObject.GrabMove(value.x);
             return;
         }
         var move = new Vector2(value.x * speed, 0);
@@ -249,12 +247,10 @@ public class Player : MonoBehaviour {
         rigid.AddForce(moveForce);
 
         // 体の向きを買える
-        if (value.x > 0.1f)
-        {
+        if (value.x > 0.1f) {
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         }
-        if (value.x < -0.1f)
-        {
+        if (value.x < -0.1f) {
             transform.rotation = Quaternion.Euler(0f, 180f, 0f);
         }
     }
@@ -263,13 +259,14 @@ public class Player : MonoBehaviour {
         if (type == ColorManager.Color_Type.Blue && type == current && abilityDurationCo != null) {
             return;
         }
-        if(type==ColorManager.Color_Type.Red&& type == current && abilityDurationCo != null)
-        {
+        if (type == ColorManager.Color_Type.Red && type == current && abilityDurationCo != null) {
             return;
         }
 
         transform.position = respawnPos;
-        Camera.main.transform.position = camera_respawnPos;
+        var cameraPos = Camera.main.transform.position;
+        cameraPos.x = respawnPos.x;
+        Camera.main.transform.position = cameraPos;
 
         current = type;
         manager.TurnMonochrome(current);
@@ -278,8 +275,7 @@ public class Player : MonoBehaviour {
         con_color.SetColorActiveState(type, true);
 
         // 服の色を変更
-        for (var i = 0; i < list_renderersForClothes.Count; ++i)
-        {
+        for (var i = 0; i < list_renderersForClothes.Count; ++i) {
             list_renderersForClothes[i].material.color = ColorManager.GetOriginalColor(current);
         }
 
@@ -306,42 +302,43 @@ public class Player : MonoBehaviour {
 
                     break;
                 case ColorManager.Color_Type.Red:
-                    
+
                     break;
                 case ColorManager.Color_Type.Yellow:
 
                     break;
             }
-            
+
         }
 
         grabedObject ??= collision.GetComponent<GrabedObject>();
     }
 
     private void OnTriggerExit2D(Collider2D collision) {
-            if (grabedObject == collision.GetComponent<GrabedObject>()) {
-                grabedObject?.GrabEnd();
-                grabedObject = null;
-            }
+        if (grabedObject == collision.GetComponent<GrabedObject>()) {
+            grabedObject?.GrabEnd();
+            grabedObject = null;
         }
-    
+
+        if (collision.CompareTag("RespawnPoint")) {
+            respawnPos = collision.transform.position;
+        }
+    }
+
 
     // ControllColor　から呼び出し /////////////////////////////////////
     ControllColor con_color;
 
-    public RecolorsInputAction GetInputAction()
-    {
+    public RecolorsInputAction GetInputAction() {
         return inputActions;
     }
 
     // 色を設定
-    public void SetPlayerColor(ColorManager.Color_Type c_type)
-    {
+    public void SetPlayerColor(ColorManager.Color_Type c_type) {
         current = c_type;
 
         // 服の色を変更
-        for (var i = 0; i < list_renderersForClothes.Count; ++i)
-        {
+        for (var i = 0; i < list_renderersForClothes.Count; ++i) {
             list_renderersForClothes[i].material.color = ColorManager.GetOriginalColor(c_type);
         }
     }
