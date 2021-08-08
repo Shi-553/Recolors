@@ -1,20 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class FireShooter : MonoBehaviour
+public class Button : MonoBehaviour
 {
-    SpriteRenderer fire;
-
     // Start is called before the first frame update
     void Start()
     {
-        fire = transform.Find("FireArea").gameObject.GetComponent<SpriteRenderer>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        fire.color = GetComponent<SpriteRenderer>().color;
+        
     }
+
+    void ButtonClicked()
+    {
+
+    }
+    
 }
