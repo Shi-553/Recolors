@@ -57,6 +57,8 @@ public class Player : MonoBehaviour {
 
     bool lastIsGround = false;
 
+    public bool IsFront { private set; get; } = true;
+
     void Awake() {
         animator = GetComponentInChildren<Animator>();
         yScale = transform.localScale.y;
@@ -249,9 +251,11 @@ public class Player : MonoBehaviour {
         // 体の向きを買える
         if (value.x > 0.1f) {
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            IsFront = true;
         }
         if (value.x < -0.1f) {
             transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            IsFront = false;
         }
     }
 
@@ -284,32 +288,6 @@ public class Player : MonoBehaviour {
 
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        var colorObj = collision.GetComponent<ColorObject>();
-        if (colorObj != null) {
-            var type = colorObj.GetColorType();
-
-            switch (type) {
-                case ColorManager.Color_Type.Blue:
-
-                    current = type;
-                    manager.TurnMonochrome(current);
-
-                    isColor = true;
-                    con_color.SetColorActiveState(ColorManager.Color_Type.Blue, true);
-
-                    collision.GetComponent<Collider2D>().isTrigger = false;
-                    Death(ColorManager.Color_Type.Blue);
-
-                    break;
-                case ColorManager.Color_Type.Red:
-
-                    break;
-                case ColorManager.Color_Type.Yellow:
-
-                    break;
-            }
-
-        }
 
         grabedObject ??= collision.GetComponent<GrabedObject>();
     }
@@ -340,6 +318,23 @@ public class Player : MonoBehaviour {
         // 服の色を変更
         for (var i = 0; i < list_renderersForClothes.Count; ++i) {
             list_renderersForClothes[i].material.color = ColorManager.GetOriginalColor(c_type);
+        }
+    }
+
+    public ColorManager.Color_Type GetPlayerColor()
+    {
+        return current;
+    }
+
+    public bool isUsingAbility()
+    {
+        if (abilityDurationCo != null)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }
