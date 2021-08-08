@@ -60,6 +60,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "ReturnColor",
+                    "type": "Button",
+                    "id": "707decf5-5b30-48b7-8d52-58f1237f8691",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -269,6 +277,28 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "SwitchAbilityMove",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f90206be-2abb-43d1-a5e4-494a03760c74",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ReturnColor",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "288f26fc-7623-4841-a5c9-f55acaf1f3d1",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ReturnColor",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
