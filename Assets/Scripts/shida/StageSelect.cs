@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class stage1_s : MonoBehaviour
+public class StageSelect : MonoBehaviour
 {
-    public void PushButton()
+    public void PushButton(int num)
     {
-        SceneManager.LoadScene("Blue");
+        SceneManager.LoadScene("Level_"+num);
     }
 }
