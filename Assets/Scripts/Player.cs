@@ -96,9 +96,22 @@ public class Player : MonoBehaviour {
         inputActions.Player.UseAbility.canceled += UseAbilityCanceled;
         inputActions.Player.Grab.started += GrabStarted;
         inputActions.Player.Grab.canceled += GrabCanceled; ;
+        inputActions.Player.ReturnColor.started += ReturnColorStarted;
 
         con_color = GetComponent<ControllColor>();
         con_color.SetInputActions(inputActions);
+    }
+
+    private void ReturnColorStarted(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
+        manager.RecoverColor(current);
+        isColor = false;
+        // 能力の情報を追加
+        con_color.SetColorActiveState(current, false);
+
+        // 服の色を変更
+        for (var i = 0; i < list_renderersForClothes.Count; ++i) {
+            list_renderersForClothes[i].material.color = ColorManager.GetWhite();
+        }
     }
 
     private void GrabCanceled(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
