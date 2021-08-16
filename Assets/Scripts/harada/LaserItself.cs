@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ElekiNet : MonoBehaviour
+public class LaserItself : MonoBehaviour
 {
     Player player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,7 @@ public class ElekiNet : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         collision.gameObject.GetComponent<Player>()?.Death(GetComponent<ColorObject>().GetColorType());
     }

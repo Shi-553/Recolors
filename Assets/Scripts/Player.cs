@@ -386,4 +386,9 @@ public class Player : MonoBehaviour {
             return false;
         }
     }
+
+    public bool GetStateofYellow()
+    {
+        return isMoving_yellow;
+    }
 }
