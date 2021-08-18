@@ -12,10 +12,10 @@ public class CameraManager : MonoBehaviour {
     float lerp = 10.0f;
 
 
-    float minX;
+    //float minX;
     void Start() {
         player = GameObject.FindObjectOfType<Player>();
-        minX = transform.position.x;
+      //  minX = transform.position.x;
 
     }
 
@@ -30,7 +30,7 @@ public class CameraManager : MonoBehaviour {
             b -= offset;
         }
 
-        b = Mathf.Max(b, minX);
+       // b = Mathf.Max(b, minX);
 
 
         var pos = transform.position;

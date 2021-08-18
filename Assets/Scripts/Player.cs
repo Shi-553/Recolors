@@ -22,6 +22,14 @@ public class Player : MonoBehaviour {
     [SerializeField]
     float waterJump = 3;
 
+    [Tooltip("電気の能力で移動する速さ、\n大きくするほど距離が伸びる")]
+    [SerializeField]
+    float elec_move = 6f;
+    bool isMoving_yellow = false;
+
+    // 黄色の時間に関する変数、コルーチンがうまくいかなかったので分けて制御
+    float time_flashing = 0.1f;
+    float time_sinceStartedFlash;
 
     RecolorsInputAction inputActions;
     Rigidbody2D rigid;
@@ -139,6 +147,15 @@ public class Player : MonoBehaviour {
             case ColorManager.Color_Type.Red:
                 break;
             case ColorManager.Color_Type.Yellow:
+                isMoving_yellow = true;
+                time_sinceStartedFlash = 0f;
+
+                // 一度停止させる
+                rigid.velocity = Vector2.zero;
+
+                var el = IsFront ? elec_move : -elec_move;
+                rigid.AddForce(new Vector2(el, 0f), ForceMode2D.Impulse);
+
                 abilityCoolDownCo = StartCoroutine(AbilityCoolDown());
                 return;
 
@@ -162,6 +179,7 @@ public class Player : MonoBehaviour {
             case ColorManager.Color_Type.Red:
                 break;
             case ColorManager.Color_Type.Yellow:
+
                 break;
 
             case ColorManager.Color_Type.c_Max:
@@ -230,6 +248,7 @@ public class Player : MonoBehaviour {
             animator.SetBool("jump", false);
         }
 
+
         lastIsGround = groundChecker.IsGround;
     }
 
@@ -270,6 +289,19 @@ public class Player : MonoBehaviour {
             transform.rotation = Quaternion.Euler(0f, 180f, 0f);
             IsFront = false;
         }
+
+        // 黄色の能力を使っているとき
+        if (current == ColorManager.Color_Type.Yellow && isMoving_yellow)
+        {
+            rigid.AddForce(new Vector2(0, 9.81f));
+
+            time_sinceStartedFlash += Time.deltaTime;
+
+            if (time_sinceStartedFlash > time_flashing)
+            {
+                isMoving_yellow = false;
+            }
+        }
     }
 
     public void Death(ColorManager.Color_Type type) {
@@ -277,6 +309,10 @@ public class Player : MonoBehaviour {
             return;
         }
         if (type == ColorManager.Color_Type.Red && type == current && abilityDurationCo != null) {
+            return;
+        }
+        if(type==ColorManager.Color_Type.Yellow && type == current && abilityDurationCo != null)
+        {
             return;
         }
 
@@ -349,5 +385,10 @@ public class Player : MonoBehaviour {
         {
             return false;
         }
+    }
+
+    public bool GetStateofYellow()
+    {
+        return isMoving_yellow;
     }
 }
