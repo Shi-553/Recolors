@@ -73,6 +73,19 @@ public class ColorManager : MonoBehaviour
 
     }
 
+    static public string GetOriginalColorLabel(Color_Type color) {
+        switch (color) {
+            case Color_Type.Blue:
+                return "Entry";
+            case Color_Type.Red:
+                return "Entry_1";
+            case Color_Type.Yellow:
+                return "Entry_0";
+
+            default:
+                return "Entry_0";
+        }
+    }
     // Šù’è‚ÌF‚ğæ“¾
     static public Color32 GetOriginalColor(Color_Type color)
     {
@@ -100,6 +113,10 @@ public class ColorManager : MonoBehaviour
         return array_MaterialColors[0];
     }
 
+    static public string GetWhiteLabel()
+    {
+        return "Entry_0";
+    }
     static public Color32 GetWhite()
     {
         return white_MaterialColor;
