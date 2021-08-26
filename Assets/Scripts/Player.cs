@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.U2D.Animation;
 
 /// <summary>
 /// プレイヤー
@@ -47,7 +48,7 @@ public class Player : MonoBehaviour {
     Animator animator;
 
     // 服だけの色情報を管理するリスト
-    List<Renderer> list_renderersForClothes;
+    SpriteResolver[] spriteResolvers;
 
     // 
 
@@ -81,21 +82,7 @@ public class Player : MonoBehaviour {
         groundChecker = GetComponent<GroundChecker>();
 
 
-        // リストに追加
-        list_renderersForClothes = new List<Renderer>();
-
-        list_renderersForClothes.Add(transform.Find("体").gameObject.GetComponent<Renderer>());
-        list_renderersForClothes.Add(transform.Find("スカート部分").gameObject.GetComponent<Renderer>());
-        list_renderersForClothes.Add(transform.Find("右腕").gameObject.GetComponent<Renderer>());
-        list_renderersForClothes.Add(transform.Find("左腕").gameObject.GetComponent<Renderer>());
-        list_renderersForClothes.Add(transform.Find("右袖").gameObject.GetComponent<Renderer>());
-        list_renderersForClothes.Add(transform.Find("右足").gameObject.GetComponent<Renderer>());
-        list_renderersForClothes.Add(transform.Find("三角布").gameObject.GetComponent<Renderer>());
-        list_renderersForClothes.Add(transform.Find("左腕").gameObject.GetComponent<Renderer>());
-        list_renderersForClothes.Add(transform.Find("左袖").gameObject.GetComponent<Renderer>());
-        list_renderersForClothes.Add(transform.Find("左足").gameObject.GetComponent<Renderer>());
-        list_renderersForClothes.Add(transform.Find("裏の髪").gameObject.GetComponent<Renderer>());
-        list_renderersForClothes.Add(transform.Find("髪").gameObject.GetComponent<Renderer>());
+        spriteResolvers = GetComponentsInChildren<SpriteResolver>();
 
         inputActions = new RecolorsInputAction();
 
@@ -117,8 +104,10 @@ public class Player : MonoBehaviour {
         con_color.SetColorActiveState(current, false);
 
         // 服の色を変更
-        for (var i = 0; i < list_renderersForClothes.Count; ++i) {
-            list_renderersForClothes[i].material.color = ColorManager.GetWhite();
+        for (var i = 0; i < spriteResolvers.Length; i++) {
+            var cate = spriteResolvers[i].GetCategory();
+
+            spriteResolvers[i].SetCategoryAndLabel(cate ,ColorManager.GetWhiteLabel());
         }
     }
 
@@ -328,9 +317,8 @@ public class Player : MonoBehaviour {
         con_color.SetColorActiveState(type, true);
 
         // 服の色を変更
-        for (var i = 0; i < list_renderersForClothes.Count; ++i) {
-            list_renderersForClothes[i].material.color = ColorManager.GetOriginalColor(current);
-        }
+        SetPlayerColor(current);
+
 
         isColor = true;
     }
@@ -365,8 +353,10 @@ public class Player : MonoBehaviour {
         current = c_type;
 
         // 服の色を変更
-        for (var i = 0; i < list_renderersForClothes.Count; ++i) {
-            list_renderersForClothes[i].material.color = ColorManager.GetOriginalColor(c_type);
+        for (var i = 0; i < spriteResolvers.Length; i++) {
+            var cate = spriteResolvers[i].GetCategory();
+
+            spriteResolvers[i].SetCategoryAndLabel(cate, ColorManager.GetOriginalColorLabel(current));
         }
     }
 
