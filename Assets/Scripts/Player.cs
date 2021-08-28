@@ -97,7 +97,7 @@ public class Player : MonoBehaviour {
         con_color.SetInputActions(inputActions);
 
         // メニュー操作をバインド
-        GameObject.Find("Canvas").GetComponent<OperateMenu>()?.SetInputActions(inputActions);
+        GameObject.Find("Canvas")?.GetComponent<OperateMenu>()?.SetInputActions(inputActions);
     }
 
     private void ReturnColorStarted(UnityEngine.InputSystem.InputAction.CallbackContext obj) {

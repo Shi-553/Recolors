@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OperateMenu : MonoBehaviour
 {
@@ -40,12 +41,11 @@ public class OperateMenu : MonoBehaviour
         Pos_relative_backGround = Image_backGround.transform.position - transform.position;
 
         PosVanish = new Vector3(0f, -10000f, 0f);
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // 最初は非表示にしておく
+        Button_retry.transform.position = PosVanish;
+        Button_titleBack.transform.position = PosVanish;
+        Image_backGround.transform.position = PosVanish;
     }
 
     private void MenuStarted(UnityEngine.InputSystem.InputAction.CallbackContext obj)
@@ -53,23 +53,34 @@ public class OperateMenu : MonoBehaviour
         // 関数が呼ばれているかチェック
         Debug.Log("Menu Working");
 
-        // メニュー展開中にメニューを閉じる
-        if (ToggleOpen)
+        // メニュー非表示中にメニューを開く
+        if (!ToggleOpen)
         {
-            ToggleOpen = false;
+            ToggleOpen = true;
 
             Button_retry.transform.position = transform.position + Pos_relative_retry;
             Button_titleBack.transform.position = transform.position + Pos_relative_titleBack;
             Image_backGround.transform.position = transform.position + Pos_relative_backGround;
         }
-        // メニュー非表示中
+        // メニュー展開中にメニューを閉じる
+
         else
         {
-            ToggleOpen = true;
+            ToggleOpen = false;
 
             Button_retry.transform.position = PosVanish;
             Button_titleBack.transform.position = PosVanish;
             Image_backGround.transform.position = PosVanish;
         }
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void BacktoTitle()
+    {
+        SceneManager.LoadScene("Main");
     }
 }
